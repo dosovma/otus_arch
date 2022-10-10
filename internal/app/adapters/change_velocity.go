@@ -1,7 +1,9 @@
 package adapters
 
+import "github.com/dosovma/otus_arch/internal/app/entity"
+
 type ChangeVelocityAdapter struct {
-	Obj UObject
+	Obj entity.UObject
 }
 
 func (cv ChangeVelocityAdapter) IsMovable() (bool, error) {

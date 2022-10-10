@@ -1,12 +1,16 @@
 package commands
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/dosovma/otus_arch/internal/app/entity"
+)
 
 type MacroCmd struct {
-	Commands []Executable
+	Commands []entity.Executable
 }
 
-func NewMacroCmd(commands ...Executable) MacroCmd {
+func NewMacroCmd(commands ...entity.Executable) MacroCmd {
 	return MacroCmd{Commands: commands}
 }
 

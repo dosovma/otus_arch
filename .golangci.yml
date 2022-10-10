@@ -64,12 +64,11 @@ linters:
     - nakedret
     - prealloc
     - gocritic
-    - gochecknoglobals
+    # - gochecknoglobals
     - whitespace
     - wsl
     - goprintffuncname
     - godot
-    - testpackage
     - nolintlint
     - noctx
     - exportloopref
@@ -82,12 +81,12 @@ linters:
     - nestif
     - predeclared
     - godot
-    - testpackage
+    # - testpackage
     - nolintlint
     - noctx
     - exportloopref
     - gofumpt
-    - tparallel
+    # - tparallel
     #- forbidigo
     - makezero
   fast: false

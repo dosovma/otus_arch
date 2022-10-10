@@ -4,10 +4,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/dosovma/otus_arch/internal/app/commands"
 	"github.com/golang/mock/gomock"
 
-	"github.com/dosovma/otus_arch/internal/app/commands/mocks"
+	"github.com/dosovma/otus_arch/internal/app/commands"
+	"github.com/dosovma/otus_arch/internal/app/entity"
+	"github.com/dosovma/otus_arch/internal/app/entity/mocks"
 )
 
 func TestMoveAndBurnFuelCmd_Execute(t *testing.T) {
@@ -38,7 +39,7 @@ func TestMoveAndBurnFuelCmd_Execute(t *testing.T) {
 			mockExecutable1 := mocks.NewMockExecutable(gomock.NewController(t))
 			mockExecutable2 := mocks.NewMockExecutable(gomock.NewController(t))
 			moveAndBurn := commands.MacroCmd{
-				Commands: []commands.Executable{mockExecutable1, mockExecutable2},
+				Commands: []entity.Executable{mockExecutable1, mockExecutable2},
 			}
 			tt.mockCalls(mockExecutable1, mockExecutable2)
 

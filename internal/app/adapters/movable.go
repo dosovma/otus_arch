@@ -3,11 +3,12 @@ package adapters
 import (
 	"math"
 
+	"github.com/dosovma/otus_arch/internal/app/entity"
 	"github.com/dosovma/otus_arch/pkg"
 )
 
 type MovableAdapter struct {
-	Obj UObject
+	Obj entity.UObject
 }
 
 func (m MovableAdapter) GetPosition() (pkg.Vector, error) {

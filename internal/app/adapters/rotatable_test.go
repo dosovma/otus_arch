@@ -6,7 +6,7 @@ import (
 	"github.com/golang/mock/gomock"
 
 	"github.com/dosovma/otus_arch/internal/app/adapters"
-	"github.com/dosovma/otus_arch/internal/app/adapters/mocks"
+	"github.com/dosovma/otus_arch/internal/app/entity/mocks"
 )
 
 func TestRotatableAdapter_GetAngularVelocity(t *testing.T) {

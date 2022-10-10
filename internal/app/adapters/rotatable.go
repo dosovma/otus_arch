@@ -1,7 +1,9 @@
 package adapters
 
+import "github.com/dosovma/otus_arch/internal/app/entity"
+
 type RotatableAdapter struct {
-	Obj UObject
+	Obj entity.UObject
 }
 
 func (r RotatableAdapter) GetDirection() (int, error) {
