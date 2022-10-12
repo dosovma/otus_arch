@@ -1,4 +1,4 @@
-package movement
+package commands
 
 //go:generate mockgen -destination=./mocks/rotatable.go -package=mocks -source=rotatable.go
 type Rotatable interface {

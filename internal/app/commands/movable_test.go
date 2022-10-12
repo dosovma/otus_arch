@@ -1,13 +1,13 @@
-package movement_test
+package commands_test
 
 import (
 	"errors"
 	"testing"
 
-	"github.com/dosovma/otus_arch/internal/app/movement"
+	"github.com/dosovma/otus_arch/internal/app/commands"
 	"github.com/golang/mock/gomock"
 
-	"github.com/dosovma/otus_arch/internal/app/movement/mocks"
+	"github.com/dosovma/otus_arch/internal/app/commands/mocks"
 	"github.com/dosovma/otus_arch/pkg"
 )
 
@@ -72,7 +72,7 @@ func TestMove_Execute(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			mockMove := mocks.NewMockMovable(gomock.NewController(t))
-			m := movement.Move{
+			m := commands.Move{
 				Move: mockMove,
 			}
 			tt.mockCalls(mockMove)
